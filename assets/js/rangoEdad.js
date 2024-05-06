@@ -1,4 +1,4 @@
-let edad = prompt ("Ingresa tu edad");
+let edad = parseInt(prompt ("Ingresa tu edad"));
 
 if (edad >= 0 && edad <= 12) {
     console.log("Sos un niño");
