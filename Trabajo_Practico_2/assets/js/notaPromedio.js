@@ -9,15 +9,15 @@ switch (true) {
         console.log("Nota Insuficiente")
         break;
 
-    case (promedio >=4 && promedio <= 5):
+    case (promedio == 4 || promedio == 5):
         console.log("Nota Regular")
         break;
 
-    case (promedio >=6 && promedio <= 7):
+    case (promedio == 6 || promedio == 7):
         console.log("Nota Buena")
         break;
 
-    case (promedio >=8 && promedio <= 9):
+    case (promedio == 8 || promedio == 9):
         console.log("Nota Muy Buena")
         break;
 
@@ -27,4 +27,10 @@ switch (true) {
 
     default:
         console.log("Nota inválida. Ingresa notas entre 1 y 10.");
+}
+
+if (nota1<=0 || nota2<=0 || nota3<=0){
+    alert("No tiene que ser 0");
+} else if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
+    alert("Ingrese un valor distinto a vacio o igual a un numero");
 }
