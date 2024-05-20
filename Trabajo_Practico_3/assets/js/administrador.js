@@ -54,35 +54,35 @@ function eliminarTarea() {
     }
 }
 
-while (mensaje<5) {
-let opciones = "Elige una de las siguientes opciones:\n";
-opciones += "1. Agregar tarea\n";
-opciones += "2. Listar tareas\n";
-opciones += "3. Editar tarea\n";
-opciones += "4. Eliminar tarea\n";
-opciones += "5. Salir\n";
+let opciones;
+do {
+    opciones = prompt("Elige una de las siguientes opciones:\n" +
+     "1. Agregar tarea\n" +
+     "2. Listar tareas\n" +
+     "3. Editar tarea\n" +
+     "4. Eliminar tarea\n" +
+     "5. Salir\n");
+
+    
+    switch (opciones) {
+        case "1":
+            agregarTarea();
+            break;
+        case "2":
+            listaTarea();
+            break;
+        case "3":
+            editarTarea();
+            break;
+        case "4":
+            eliminarTarea();
+            break;
+        case "5":
+            alert("Saliendo del Administrador de Tareas");
+            break;
+        default:
+            alert("Opción invalida. Elija una opción del 1 al 5");
+    } 
+} while (opciones !== "5");
 
 
-let mensaje = parseInt(prompt(opciones));
-
-
-switch (mensaje) {
-    case 1:
-        agregarTarea();
-        break;
-    case 2:
-        listaTarea();
-        break;
-    case 3:
-        editarTarea();
-        break;
-    case 4:
-        eliminarTarea();
-        break;
-    case 5:
-        alert("Saliendo del Administrador de Tareas");
-        break;
-    default:
-        alert("Opción invalida. Elija una opción del 1 al 5");
-}
-}
